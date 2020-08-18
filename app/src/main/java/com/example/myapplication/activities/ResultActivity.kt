@@ -1,39 +1,32 @@
 package com.example.myapplication.activities
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentTransaction
 import com.example.myapplication.R
 import com.example.myapplication.fragments.Fragment1
 import com.example.myapplication.fragments.Fragment2
+
 
 class ResultActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
 
-       addFragmentToActivity(
-            getSupportFragmentManager(), Fragment1(),
-           R.id.frameLayout_1
-       );
+       loadFragment(R.id.frameLayout_1, Fragment1())
 
-        addFragmentToActivity(
-            getSupportFragmentManager(), Fragment2(),
-            R.id.frameLayout_2
-        );
+        loadFragment(R.id.frameLayout_2, Fragment2())
     }
 
-    fun addFragmentToActivity(
-        manager: FragmentManager,
-        fragment: Fragment?,
-        frameId: Int
-    ) {
-        val transaction: FragmentTransaction = manager.beginTransaction()
-        if (fragment != null) {
-            transaction.add(frameId, fragment)
-        }
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+    }
+
+    fun loadFragment(frameId: Int, fragment: Fragment){
+        val fm = supportFragmentManager
+        val transaction = fm.beginTransaction()
+        transaction.replace(frameId, fragment)
         transaction.commit()
     }
 }

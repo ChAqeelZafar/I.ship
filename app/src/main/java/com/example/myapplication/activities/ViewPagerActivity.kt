@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
+import androidx.viewpager2.widget.ViewPager2
 import com.example.myapplication.R
 import com.example.myapplication.adapters.MyFragmentPagerAdapter
 import com.example.myapplication.helpers.MyFramentManager
@@ -16,7 +17,7 @@ class ViewPagerActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_view_pager)
 
         viewpager = findViewById(R.id.viewpager)
 
@@ -35,15 +36,6 @@ class ViewPagerActivity : AppCompatActivity() {
         viewpager!!.adapter = adapter
     }
 
-    override fun onActivityResult(
-        requestCode: Int,
-        resultCode: Int,
-        data: Intent?
-    ) {
-        super.onActivityResult(requestCode, resultCode, data)
-        for (fragment in supportFragmentManager.fragments) {
-            fragment.onActivityResult(requestCode, resultCode, data)
-        }
-    }
+
 
 }

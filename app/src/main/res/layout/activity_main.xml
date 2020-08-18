@@ -154,7 +154,6 @@
                 android:shadowColor="@color/colorAccent"
                 android:text="Sign in"
                 android:textColorHint="@color/colorAccent"
-                android:visibility="col"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName2"
                 app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName2"

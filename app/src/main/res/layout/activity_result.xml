@@ -16,11 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <fragment
-            android:id="@+id/fragment"
-            android:name="com.example.myapplication.fragments.FragmentMain"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+
     </FrameLayout>
 
     <androidx.constraintlayout.widget.Guideline
@@ -40,10 +36,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline">
 
-        <fragment
-            android:id="@+id/fragment2"
-            android:name="com.example.myapplication.fragments.FragmentMain"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+
     </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

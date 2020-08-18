@@ -23,7 +23,7 @@ class ViewActivity extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        final View view = inflater.inflate(R.layout.main_fragment, container, false);
+        final View view = inflater.inflate(R.layout.fragment_home, container, false);
 
 
 
